@@ -29,14 +29,15 @@ import 'package:movie_app_tdd_clean_architecture/domain/repositories/movie_repos
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockMovieRepository extends _i1.Mock implements _i2.MovieRepository {
+  MockMovieRepository() {
+    _i1.throwOnMissingStub(this);
+  }
+
   @override
   _i3.Future<List<_i4.Movie>> getTrendingMovies() =>
       (super.noSuchMethod(
             Invocation.method(#getTrendingMovies, []),
             returnValue: _i3.Future<List<_i4.Movie>>.value(<_i4.Movie>[]),
-            returnValueForMissingStub: _i3.Future<List<_i4.Movie>>.value(
-              <_i4.Movie>[],
-            ),
           )
           as _i3.Future<List<_i4.Movie>>);
 
@@ -45,9 +46,6 @@ class MockMovieRepository extends _i1.Mock implements _i2.MovieRepository {
       (super.noSuchMethod(
             Invocation.method(#searchMovies, [query]),
             returnValue: _i3.Future<List<_i4.Movie>>.value(<_i4.Movie>[]),
-            returnValueForMissingStub: _i3.Future<List<_i4.Movie>>.value(
-              <_i4.Movie>[],
-            ),
           )
           as _i3.Future<List<_i4.Movie>>);
 
@@ -56,9 +54,6 @@ class MockMovieRepository extends _i1.Mock implements _i2.MovieRepository {
       (super.noSuchMethod(
             Invocation.method(#getPopularMovies, []),
             returnValue: _i3.Future<List<_i4.Movie>>.value(<_i4.Movie>[]),
-            returnValueForMissingStub: _i3.Future<List<_i4.Movie>>.value(
-              <_i4.Movie>[],
-            ),
           )
           as _i3.Future<List<_i4.Movie>>);
 }
